@@ -30,7 +30,7 @@
 </head>
   <body class="bg-gray-100 text-gray-900 antialiased">
     <div id="root"></div>
-    <!-- 这里是关键修改：告诉浏览器去加载 src 目录下的 index.tsx -->
-    <script type="module" src="/src/index.tsx"></script>
+    <!-- 关键修改：因为你的 index.tsx 在根目录，所以这里路径写 /index.tsx -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
