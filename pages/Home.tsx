@@ -84,7 +84,7 @@ export const Home: React.FC = () => {
           <h2 className="font-bold text-gray-800 text-sm flex items-center">
             <Store size={16} className="mr-1 text-green-600" /> 校园商家 & 服务
           </h2>
-          <span className="text-xs text-gray-400">入驻 ></span>
+          <span className="text-xs text-gray-400">入驻 </span>
         </div>
         <div className="flex space-x-3 overflow-x-auto no-scrollbar pb-1">
           {MOCK_MERCHANTS.map((m) => (
