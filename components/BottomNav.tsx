@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, ShoppingBag, PlusCircle, User, Store } from 'lucide-react';
+import {Home, ShoppingBag, PlusCircle, User, Store, Package} from 'lucide-react';
 
 export const BottomNav: React.FC = () => {
   const navClass = ({ isActive }: { isActive: boolean }) => 
@@ -34,6 +34,7 @@ export const BottomNav: React.FC = () => {
         <User size={22} />
         <span className="text-[10px]">我的</span>
       </NavLink>
+
     </div>
   );
 };

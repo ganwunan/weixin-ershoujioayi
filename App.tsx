@@ -7,6 +7,7 @@ import { Profile } from './pages/Profile';
 import { Publish } from './pages/Publish';
 import { Recycling } from './pages/Recycling';
 import { ProductDetail } from './pages/ProductDetail';
+import {ExpressPickup} from "@/pages/ExpressPickup.tsx";
 
 const App: React.FC = () => {
   return (
@@ -29,5 +30,6 @@ const App: React.FC = () => {
     </Router>
   );
 };
-
+// 添加新路由
+<Route path="/express-pickup" element={<ExpressPickup />} />
 export default App;
