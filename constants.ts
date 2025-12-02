@@ -47,7 +47,7 @@ export const MOCK_ADS: AdSlot[] = [
 ];
 
 export const MOCK_MERCHANTS: Merchant[] = [
-  { id: 'm1', name: '黄骅冬枣直销', logo: 'https://picsum.photos/id/1080/100/100', type: 'farmer', description: '农户直连，今日采摘', isVerified: true },
+  { id: 'm1', name: '黄骅冬枣直销', logo: '/images/products/dongzao.png', type: 'farmer', description: '农户直连，今日采摘', isVerified: true },
   { id: 'm2', name: '顺丰校园站', logo: 'https://picsum.photos/id/106/100/100', type: 'official', description: '寄件优惠', isVerified: true },
   { id: 'm3', name: '小张电脑维修', logo: 'https://picsum.photos/id/2/100/100', type: 'local_business', description: '上门清灰', isVerified: true },
   { id: 'm4', name: '校园文创店', logo: 'https://picsum.photos/id/250/100/100', type: 'official', description: '官方周边', isVerified: true },

@@ -91,53 +91,9 @@ export const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* VIP Banner - 新增 */}
-        <div
-            className="mx-4 mt-4 mb-4 rounded-xl shadow-md overflow-hidden relative bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-300 cursor-pointer transform transition-transform hover:scale-[1.02]"
-            onClick={() => navigate('/profile?tab=vip')}
-        >
-          <div className="p-4 flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center mb-1">
-                <Crown size={18} className="text-white mr-2" />
-                <h3 className="font-bold text-white text-sm">VIP会员特权</h3>
-                {userVIP.isVIP && (
-                    <span className="ml-2 text-xs bg-white/20 text-white px-2 py-0.5 rounded-full">
-                  {userVIP.level === 'month' ? '月度' : userVIP.level === 'season' ? '季度' : '年度'}会员
-                </span>
-                )}
-              </div>
-              <p className="text-xs text-white/90 mb-2">
-                {userVIP.isVIP
-                    ? `享有首页推荐特权，剩余${userVIP.freePickups}次免费取货`
-                    : '开通VIP，享首页优先推荐、手续费优惠、免费上门取货'}
-              </p>
-              <button
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg ${userVIP.isVIP ? 'bg-white/20 text-white' : 'bg-white text-yellow-600'}`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate('/profile?tab=vip');
-                  }}
-              >
-                {userVIP.isVIP ? '管理会员' : '立即开通'}
-              </button>
-            </div>
-            <div className="flex flex-col items-center ml-2">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-1">
-                <Zap size={24} className="text-white" />
-              </div>
-              {userVIP.isVIP ? (
-                  <span className="text-[10px] text-white bg-white/20 px-1 rounded">VIP中</span>
-              ) : (
-                  <span className="text-[10px] text-white bg-red-500 px-1 rounded">限时优惠</span>
-              )}
-            </div>
-          </div>
-        </div>
-
         {/* Ad Carousel (Monetization) */}
         {activeAds.length > 0 && (
-            <div className="px-4 -mt-4 mb-4 relative z-10">
+            <div className="px-4 mt-4 mb-4 relative z-10">
               <div className="bg-white p-1 rounded-xl shadow-md overflow-hidden relative">
                 <img
                     src={activeAds[currentAdIndex].imageUrl}
@@ -173,8 +129,7 @@ export const Home: React.FC = () => {
           ))}
         </div>
 
-        {/* Campus Merchants & Services (New) - 修改这里，添加快递代取 */}
-
+        {/* Campus Merchants & Services (New) */}
         <div className="px-4 mb-6">
           <div className="flex items-center justify-between mb-2">
             <h2 className="font-bold text-gray-800 text-sm flex items-center">
@@ -210,10 +165,14 @@ export const Home: React.FC = () => {
               ))}
 
               {/* 快递代取服务卡片 - 新增 */}
+              {/* 快递代取服务卡片 - 修复点击事件 */}
               <div
                   key="express_service"
                   className="flex-shrink-0 w-24 flex flex-col items-center bg-white p-2 rounded-lg border border-gray-100 shadow-sm cursor-pointer hover:shadow-md transition-shadow active:opacity-90 hover:scale-[1.02] transition-transform relative"
-                  onClick={() => navigate('/express-pickup')}
+                  onClick={() => {
+
+                    navigate('/express-pickup');
+                  }}
               >
                 {/* 热门标签 */}
                 <div className="absolute -top-1 -right-1">
@@ -222,7 +181,7 @@ export const Home: React.FC = () => {
                   </div>
                 </div>
 
-                {/* 快递图标 - 用绿色背景和Package图标 */}
+                {/* 快递图标 */}
                 <div className="w-10 h-10 bg-gradient-to-br from-green-100 to-emerald-100 rounded-full flex items-center justify-center mb-1 border border-green-200">
                   <Package size={20} className="text-green-600" />
                 </div>
@@ -233,9 +192,9 @@ export const Home: React.FC = () => {
 
             {/* 滚动提示文字 */}
             <div className="text-center mt-2">
-      <span className="text-[10px] text-gray-400 flex items-center justify-center">
-        <span className="mr-1">←→</span> 左右滑动查看更多
-      </span>
+              <span className="text-[10px] text-gray-400 flex items-center justify-center">
+                <span className="mr-1">←→</span> 左右滑动查看更多
+              </span>
             </div>
           </div>
         </div>
@@ -258,8 +217,8 @@ export const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* VIP特权展示 - 新增 */}
-        <div className="px-4 mb-6">
+
+        <div className="px-4 mb-4">
           <div className="flex items-center justify-between mb-3">
             <h2 className="font-bold text-gray-800 text-sm flex items-center">
               <Gift size={16} className="mr-1.5 text-red-500" /> VIP专属特权
@@ -268,8 +227,8 @@ export const Home: React.FC = () => {
                 className="text-xs text-yellow-600 font-medium flex items-center cursor-pointer"
                 onClick={() => navigate('/profile?tab=vip')}
             >
-            了解详情 <TrendingUp size={12} className="ml-1" />
-          </span>
+              了解详情 <TrendingUp size={12} className="ml-1" />
+            </span>
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-3 rounded-lg border border-yellow-100">
@@ -314,6 +273,50 @@ export const Home: React.FC = () => {
           </div>
         </div>
 
+
+        <div
+            className="mx-4 mb-6 rounded-xl shadow-md overflow-hidden relative bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-300 cursor-pointer transform transition-transform hover:scale-[1.02]"
+            onClick={() => navigate('/profile?tab=vip')}
+        >
+          <div className="p-4 flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center mb-1">
+                <Crown size={18} className="text-white mr-2" />
+                <h3 className="font-bold text-white text-sm">VIP会员特权</h3>
+                {userVIP.isVIP && (
+                    <span className="ml-2 text-xs bg-white/20 text-white px-2 py-0.5 rounded-full">
+                      {userVIP.level === 'month' ? '月度' : userVIP.level === 'season' ? '季度' : '年度'}会员
+                    </span>
+                )}
+              </div>
+              <p className="text-xs text-white/90 mb-2">
+                {userVIP.isVIP
+                    ? `享有首页推荐特权，剩余${userVIP.freePickups}次免费取货`
+                    : '开通VIP，享首页优先推荐、手续费优惠、免费上门取货'}
+              </p>
+              <button
+                  className={`px-3 py-1.5 text-xs font-medium rounded-lg ${userVIP.isVIP ? 'bg-white/20 text-white' : 'bg-white text-yellow-600'}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate('/profile?tab=vip');
+                  }}
+              >
+                {userVIP.isVIP ? '管理会员' : '立即开通'}
+              </button>
+            </div>
+            <div className="flex flex-col items-center ml-2">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-1">
+                <Zap size={24} className="text-white" />
+              </div>
+              {userVIP.isVIP ? (
+                  <span className="text-[10px] text-white bg-white/20 px-1 rounded">VIP中</span>
+              ) : (
+                  <span className="text-[10px] text-white bg-red-500 px-1 rounded">限时优惠</span>
+              )}
+            </div>
+          </div>
+        </div>
+
         {/* Recommendations Feed - 添加VIP标识 */}
         <div className="px-4">
           <div className="flex items-center justify-between mb-3">
@@ -331,8 +334,8 @@ export const Home: React.FC = () => {
                 className="text-xs text-gray-400 cursor-pointer"
                 onClick={() => navigate('/market')}
             >
-            查看全部 &gt;
-          </span>
+              查看全部 &gt;
+            </span>
           </div>
 
           <div className="grid grid-cols-2 gap-3">
