@@ -19,6 +19,7 @@ const App: React.FC = () => {
           <Route path="profile" element={<Profile />} />
           <Route path="publish" element={<Publish />} />
           <Route path="recycling" element={<Recycling />} />
+          <Route path="/express-pickup" element={<ExpressPickup />} />
           {/* Product Detail isn't part of the bottom nav layout technically in native apps, 
               but for web simplified nav, we can keep it here or move it out. 
               Let's keep inside layout for simplicity but hide bottom nav if needed via CSS or context. 
