@@ -9,7 +9,7 @@ export const ProductDetail: React.FC = () => {
   const product = MOCK_PRODUCTS.find(p => p.id === id) || MOCK_PRODUCTS[0];
 
   return (
-    <div className="bg-white min-h-screen pb-16">
+    <div className="bg-white min-h-screen pb-20">
       {/* Nav */}
       <div className="fixed top-0 w-full z-50 flex justify-between items-center p-4 bg-transparent pointer-events-none">
         <button onClick={() => navigate(-1)} className="w-8 h-8 bg-black/30 backdrop-blur rounded-full flex items-center justify-center text-white pointer-events-auto">

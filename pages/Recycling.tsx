@@ -3,7 +3,7 @@ import { Sprout, Truck, Recycle, Wheat } from 'lucide-react';
 
 export const Recycling: React.FC = () => {
   return (
-    <div className="pb-16 bg-gray-50 min-h-screen">
+    <div className="pb-20 bg-gray-50 min-h-screen">
       <div className="bg-green-600 p-6 text-white rounded-b-[2rem] shadow-md">
         <h1 className="text-xl font-bold mb-1">绿创循享</h1>
         <p className="text-sm opacity-90">助农助学，绿色循环</p>

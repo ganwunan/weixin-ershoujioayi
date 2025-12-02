@@ -12,7 +12,7 @@ export const Market: React.FC = () => {
     : MOCK_PRODUCTS.filter(p => p.category === activeTab);
 
   return (
-    <div className="pt-2 pb-16">
+    <div className="pt-2 ">
       {/* Top Bar */}
       <div className="px-4 mb-4 flex items-center space-x-3">
         <div className="flex-1 bg-white rounded-full flex items-center px-3 py-2 shadow-sm border border-gray-100">
