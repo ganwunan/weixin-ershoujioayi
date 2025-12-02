@@ -28,9 +28,9 @@ export const ExpressPickup: React.FC = () => {
     };
 
     const packagePrices = {
-        small: { base: 3, urgent: 5 },
-        medium: { base: 5, urgent: 7 },
-        large: { base: 8, urgent: 10 }
+        small: { base: 1.5, urgent: 5 },
+        medium: { base: 3, urgent: 7 },
+        large: { base: '5+', urgent: 10 }
     };
 
     const calculatePrice = () => {
