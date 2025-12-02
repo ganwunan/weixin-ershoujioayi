@@ -38,7 +38,7 @@ export const Recycling: React.FC = () => {
             
             <div className="space-y-3">
                 <div className="flex bg-gray-50 p-2 rounded-lg">
-                    <img src="https://picsum.photos/id/1080/100/100" className="w-16 h-16 rounded-md object-cover mr-3" />
+                    <img src="/images/products/dongzao.png" className="w-16 h-16 rounded-md object-cover mr-3" />
                     <div className="flex-1">
                         <h3 className="text-sm font-bold">黄骅冬枣</h3>
                         <p className="text-[10px] text-gray-500 line-clamp-1">脆甜多汁，产地直发，支持校园配送。</p>
