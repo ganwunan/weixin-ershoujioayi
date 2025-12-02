@@ -67,7 +67,7 @@ export const Home: React.FC = () => {
   };
 
   return (
-      <div className="pb-4">
+      <div className="pb-16">
         {/* Header Search */}
         <div className="bg-yellow-400 p-4 pb-6 rounded-b-[2rem] shadow-sm sticky top-0 z-20">
           <div className="flex items-center justify-between mb-2">

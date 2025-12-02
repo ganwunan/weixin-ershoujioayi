@@ -41,7 +41,7 @@ export const ExpressPickup: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gray-50 pb-16">
             {/* Header */}
             <div className="bg-green-500 text-white p-4">
                 <div className="flex items-center mb-2">

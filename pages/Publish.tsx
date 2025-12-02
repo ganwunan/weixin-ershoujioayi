@@ -16,7 +16,7 @@ export const Publish: React.FC = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen pb-20">
+    <div className="bg-white min-h-screen pb-16">
       <div className="px-4 py-3 border-b border-gray-100 flex justify-between items-center bg-white sticky top-0 z-10">
         <button className="text-sm text-gray-500">取消</button>
         <h1 className="font-bold text-gray-800">发布闲置</h1>
