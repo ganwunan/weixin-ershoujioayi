@@ -49,12 +49,12 @@ export const Recycling: React.FC = () => {
                     </div>
                 </div>
                  <div className="flex bg-gray-50 p-2 rounded-lg">
-                    <img src="https://picsum.photos/id/292/100/100" className="w-16 h-16 rounded-md object-cover mr-3" />
+                    <img src="/images/products/huoguoji.png" className="w-16 h-16 rounded-md object-cover mr-3" />
                     <div className="flex-1">
-                        <h3 className="text-sm font-bold">农家自制面酱</h3>
-                        <p className="text-[10px] text-gray-500 line-clamp-1">传统工艺，无添加，食堂特供同款。</p>
+                        <h3 className="text-sm font-bold">火锅鸡礼盒</h3>
+                        <p className="text-[10px] text-gray-500 line-clamp-1">传统工艺，无添加。</p>
                         <div className="flex justify-between items-center mt-2">
-                            <span className="text-red-500 font-bold text-xs">¥12.0/瓶</span>
+                            <span className="text-red-500 font-bold text-xs">¥58.0/盒</span>
                             <button className="bg-yellow-400 text-xs px-2 py-1 rounded-full font-medium">购买</button>
                         </div>
                     </div>
